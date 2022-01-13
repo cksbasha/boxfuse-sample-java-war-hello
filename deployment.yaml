@@ -13,6 +13,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: 
+        image: gcr.io/augmented-ward-329505/tomcat
         ports:
         - containerPort: 8080
