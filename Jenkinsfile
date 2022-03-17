@@ -2,10 +2,10 @@
 pipeline {
 
   environment {
-    PROJECT = "augmented-ward-329505"
+    PROJECT = "indigo-history-337312"
     APP_NAME = "hello"
     FE_SVC_NAME = "${APP_NAME}-frontend"
-    CLUSTER = "false"
+    CLUSTER = "way2die"
     CLUSTER_ZONE = "us-central1-c"
     IMAGE_TAG = "gcr.io/${PROJECT}/${APP_NAME}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
     JENKINS_CRED = "${PROJECT}"
@@ -65,7 +65,7 @@ spec:
     stage('Deploy Dev') {
       steps {
         container('kubectl') {
-          sh "gcloud container clusters get-credentials false --zone us-central1-c --project augmented-ward-329505"
+          sh "gcloud container clusters get-credentials way2die --zone us-central1-c --project indigo-history-337312"
           sh "kubectl apply -f deployment.yaml "
          
         }
