@@ -66,7 +66,7 @@ spec:
       steps {
         container('kubectl') {
           sh "gcloud container clusters get-credentials way2die --zone us-central1-c --project indigo-history-337312"
-          sh "kubectl apply -f help "
+          sh "kubectl apply --help "
          
         }
       }
